@@ -5,8 +5,15 @@ package com.qatang.team.algorithm.xdd;
  * Created by Popo on 2017/4/20.
  */
 public class Node {
-    protected Node next; //指针域
-    protected int data;//数据域
+    /**
+     * 节点
+     */
+    protected Node next;
+
+    /**
+     * 数据
+     */
+    protected int data;
 
     public Node(int data) {
         this.data = data;
