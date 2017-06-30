@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.qatang.team</groupId>
+    <artifactId>team-api</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>team-data-api</module>
+        <module>team-data-service</module>
+    </modules>
+
+    <distributionManagement>
+        <repository>
+            <id>snapshots</id>
+            <name>Snapshots Repositories</name>
+            <url>http://nexus.qatang.com:18081/repository/maven-snapshots/</url>
+        </repository>
+    </distributionManagement>
+
+    <properties>
+        <team.api.data.version>1.0.0-SNAPSHOT</team.api.data.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.qatang.team</groupId>
+                <artifactId>team-data-api</artifactId>
+                <version>${team.api.data.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
